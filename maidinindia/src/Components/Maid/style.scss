@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.formmaid
+{
+  border-color: #11998e;
+  box-shadow: 5px 5px 5px 5px grey;
+  margin: auto;  
+  padding: 30px;
+  width:750px;
+  text-align: center;
+  border-radius: 5px;
+  overflow:auto;
+  background-color: white;
+
+}
+.forminput {
+  font-family: inherit;
+  width: 200px;
+  border: 0;
+  border-bottom: 2px solid  #ffff4d;
+  outline: 0;
+  font-size: 15px;
+  
+  background: transparent;
+  transition: border-color 0.2s;
+  margin-left: 0px;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ ._label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+.gender
+{
+  padding-left: 50px;
+  display: inline-block;
+  font-weight: 600;
+}
+.exp
+{
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 150px;
+  border-radius:0px;
+  height: 25px;
+}
+.fas
+{
+  font-size: 25px;
+  color:#333;
+  cursor: pointer;
+}
+.address
+{
+  display: inline;
+  padding: 0px;
+}
+.first
+{
+  padding-left: 25px;
+}
+._label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #11998e;
+  margin-left: 5px;
+  margin-right: 0px;
+  text-transform: uppercase;
+ 
+}
+$color:#ffff4d;
+.button {
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  border-radius: 5px;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .15rem;
+  cursor:pointer;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:$color;
+    color: #333;
+    border-radius: 5px;
+    border:none;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken(#333, 15%);
+    transition: all .3s;
+    border-radius: 5px;
+    z-index: -1;
+  }
+  &:hover {
+    color: $color;
+    background-color: #333;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+
+.forminput:focus {
+  ~ ._label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #ffff4d;
+    font-weight:700;    
+  }
+  padding-bottom: 6px;  
+  font-weight: 500;
+  border-width: 2px;
+  border-color:   #11998e;
+}
+/* reset input */
+.forminput{
+  &:required,&:invalid { box-shadow:none; }
+}
+.reglog
+{
+  list-style-type:none;
+  display:inline;
+  float: left;
+  font-family:'poppins';
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: .05rem;
+  color:   #11998e;
+  padding: 0px 5px 5px 5px;
+  margin-right:10px;
+}
+.text
+{
+  color: #11998e;
+}
+.active {
+  border-bottom: 3px solid #ffff4d;
+}
+.mobile
+{
+  margin: auto;
+}
+.login-btn {
+  width: 100%;
+  height: 55px;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 17px;
+
+}
+
+  .terms-text {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 15px;
+    color: #929495;
+    font-family: Poppins;
+  }
+
+
+.login-wrapper {
+.MuiFab-extended.MuiFab-sizeSmall.otp-btn {
+  font-size: 12px;
+  text-transform: none;
+  margin: 8px;
+  position: absolute;
+  right: 0;
+  top: -20px;
+  width: 158px;
+  font-family: Poppins;
+  font-weight: bold;
+}
+.forgot-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+}
+.signup-wrapper {
+  margin:70px;
+.info-text {
+  font-size: 14px;
+  color: #25292b;
+  font-family: Poppins;
+  font-weight: 500;
+}
+.subscribe_text {
+  .MuiTypography-body1 {
+    font-size: 13px;
+  }
+  .MuiCheckbox-root {
+    padding: 0 9px;
+  }
+  align-items: flex-start;
+  color: #929495;
+  margin-top: 16px;
+}
+}
+@media screen and (max-width: 576px) {
+.login-signup {
+  padding: 12px;
+}
+}

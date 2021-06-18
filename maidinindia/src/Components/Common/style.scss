@@ -1,0 +1,195 @@
+img
+{
+    height:500px;
+    width:50%;
+    float: left;
+}
+$color:#ffff4d;
+.button {
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  border-radius: 15px;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .15rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  border:none;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+  z-index: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(0deg, #fece00 0%, #ffe172 100%);
+    color: #333;
+    border-radius: 15px;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken(#333, 15%);
+   
+    border-radius: 15px;
+    z-index: -1;
+  }
+  &:hover {
+    color: $color;
+    background-color: #333;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+
+
+.header
+{
+    height:500px;
+    width:50%;
+    float:right;
+    background-image:linear-gradient(0deg, #fece00 0%, #ffe172 100%);;
+}
+.ull {
+   margin: auto;
+    background-color:#ffff4d;
+  }
+  
+  .lii {
+    float: left;
+    font-family:'Ubuntu', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+  }
+  .tired
+  {
+    padding:50px;
+  }
+  .mom
+  {
+    width:380px;
+    height:300px;
+    padding:50px;
+    
+  }
+  .momm
+  {
+    width:380px;
+    height:300px;
+    padding:50px;
+    float:right;
+  }
+  .para{
+    font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    padding-left: 80px;
+    padding-right: 80px;
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+    
+  }
+  .whyus
+  {
+    float:left;
+    background-color:#f2f2f2;
+    font-size: 32px;
+
+  }
+  .book{
+    float: right;
+    padding: 100px 120px 40px;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+ h1
+ {
+    font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    float: left;
+    padding-left: 80px;
+ }
+ .contact
+ {
+    
+     display: flex;
+     padding-left:80px;
+     font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+ }
+ .follow
+ {
+   font-size: 18px;
+ }
+ .social
+ {
+     padding-left: 80px;
+     display: flex;
+     text-decoration: none;
+     font-size: 25px;
+ }
+ .welname
+ {
+   text-transform: uppercase;
+ }
+  .lii {
+    display: inline-block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover{
+        background-color:#333;
+        color: #ffff4d;
+    }
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
