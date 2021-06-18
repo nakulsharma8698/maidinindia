@@ -4,6 +4,7 @@ import './style.scss'
 import axios from 'axios';
 import Navbar from '../Footer/navbar';
 import {IoIosAddCircle} from 'react-icons/io'
+require("dotenv").config();
 
 class Address extends Component {
     constructor(props) {
@@ -47,13 +48,13 @@ class Address extends Component {
        }
         openCheckout() {
         let options = {
-          "key": process.env.RAZORPAY_KEY,
+          "key": process.env.REACT_APP_RAZORPAY_KEY,
           "amount": 599*100, // 2000 paise = INR 20, amount in paisa
           "name": "Maid-in-India",
           "description": "Purchase Description",
           "image": logo,
           "handler": function (response){
-            alert("Order Successful" + "Payment Id: " + response.razorpay_payment_id);
+            alert("Order Successful "+ "Payment Id: "+response.razorpay_payment_id);
             console.log(response);
           },
           
@@ -88,9 +89,9 @@ class Address extends Component {
                 <div className="addressheader"> Choose ServiceType</div>
                 <div className="booktype">
                     <label><b>I want to hire : </b></label><input type="checkbox" onClick={this.check} className="checkbox"/><br/>
-                    {this.state.hire?<p></p>: <select className="hiring" name="amt" onChange={this.handleChange}>
+                    {this.state.hire?<p></p>: <select className="hiring" name="amt" defaultValue="1" onChange={this.handleChange}>
                         <option value="0.5">Hourly</option>
-                        <option value="1" selected>1 day</option>
+                        <option value="1" defaultValue>1 day</option>
                         <option value="2">2 days</option>
                         <option value="3"> 3 days</option>
                         <option value="4">4 days</option>
@@ -105,7 +106,8 @@ class Address extends Component {
                 </div>
                 <div className="addressheader">Select Address</div>
                {this.state.address.map(add=>
-                <div>
+                <div key={add._id}>
+
                     {add.address.map((a,i)=>
                     
                     <label className="addressbox" onChange={this.handleChange}>

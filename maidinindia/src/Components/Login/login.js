@@ -4,12 +4,12 @@ import { Fab, FormControlLabel, Checkbox } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import "./style.scss";
 import axios from 'axios';
-require("dotenv").config();
 //import axios from 'axios';
 import { GoogleLogin } from 'react-google-login';
 import { Link } from 'react-router-dom';
 import Navbar from "../Footer/navbar";
 import {FaFacebookF, FaGoogle} from 'react-icons/fa'
+require("dotenv").config();
 
 
 
@@ -189,7 +189,7 @@ handleLogin(e)
               Google
             </Button>*/}
             <GoogleLogin
-              clientId={process.env.CLIENT_ID}
+              clientId={process.env.REACT_APP_CLIENT_ID}
               buttonText="Google"
               render={renderProps => (
                 <Button onClick={renderProps.onClick} startIcon={<FaGoogle />} className="google-btn" variant="outlined"> Google</Button>
